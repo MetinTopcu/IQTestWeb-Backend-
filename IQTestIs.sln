@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Core", "IQTest.Core\IQTest.Core.csproj", "{EEE7DAA0-CEDA-44FC-876F-79255F82496B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Repository", "IQTest.Repository\IQTest.Repository.csproj", "{0EED3A05-D3D1-4ED8-94D5-EF175DAF4C88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Service", "IQTest.Service\IQTest.Service.csproj", "{20455C37-5A9C-4522-949E-230D88DCA351}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Caching", "IQTest.Caching\IQTest.Caching.csproj", "{974E567D-E255-4F0B-8105-7DE21B63DE52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Web", "IQTest.Web\IQTest.Web.csproj", "{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQTest.API", "IQTest.API\IQTest.API.csproj", "{68C969EF-0878-450F-998B-BA5873CEC5BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEE7DAA0-CEDA-44FC-876F-79255F82496B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE7DAA0-CEDA-44FC-876F-79255F82496B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE7DAA0-CEDA-44FC-876F-79255F82496B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE7DAA0-CEDA-44FC-876F-79255F82496B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EED3A05-D3D1-4ED8-94D5-EF175DAF4C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EED3A05-D3D1-4ED8-94D5-EF175DAF4C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EED3A05-D3D1-4ED8-94D5-EF175DAF4C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EED3A05-D3D1-4ED8-94D5-EF175DAF4C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20455C37-5A9C-4522-949E-230D88DCA351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20455C37-5A9C-4522-949E-230D88DCA351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20455C37-5A9C-4522-949E-230D88DCA351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20455C37-5A9C-4522-949E-230D88DCA351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974E567D-E255-4F0B-8105-7DE21B63DE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974E567D-E255-4F0B-8105-7DE21B63DE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974E567D-E255-4F0B-8105-7DE21B63DE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974E567D-E255-4F0B-8105-7DE21B63DE52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD95737A-4450-47F2-86BE-1330C91BC3F0}
+	EndGlobalSection
+EndGlobal

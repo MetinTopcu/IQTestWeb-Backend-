@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IQTest.Core.Models
+{
+    public class CorrectAnswer
+    {
+        public int Id { get; set; }
+        public string CorrectAns { get; set; }
+
+        public int QuestionId { get; set; }
+
+        public Question Question { get; set; }
+    }
+}
