@@ -3,12 +3,13 @@ using IQTest.Core.DTOs;
 using IQTest.Core.Models;
 using IQTest.Core.Services;
 using IQTest.Service.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IQTest.API.Controllers
 {
-
+    [Authorize]
     public class QuestionsController : CustomBaseController
     {
         private readonly IMapper _mapper;

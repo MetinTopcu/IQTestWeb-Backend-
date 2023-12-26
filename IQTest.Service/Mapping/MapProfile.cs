@@ -19,6 +19,8 @@ namespace IQTest.Service.Mapping
             CreateMap<QuestionUpdateDto, Question>();
             CreateMap<Question, QuestionsWithCorrectWrongDto>();
 
+            CreateMap<UserAppDto, UserApp>().ReverseMap();
+
         }
     }
 }

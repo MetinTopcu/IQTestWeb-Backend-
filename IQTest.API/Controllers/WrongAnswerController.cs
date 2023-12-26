@@ -2,11 +2,13 @@
 using IQTest.Core.DTOs;
 using IQTest.Core.Models;
 using IQTest.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IQTest.API.Controllers
 {
+    [Authorize]
     public class WrongAnswerController : CustomBaseController
     {
         private readonly IMapper _mapper;

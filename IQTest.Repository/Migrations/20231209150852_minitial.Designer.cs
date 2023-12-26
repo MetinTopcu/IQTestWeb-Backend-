@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IQTest.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231010091536_initial")]
-    partial class initial
+    [Migration("20231209150852_minitial")]
+    partial class minitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace IQTest.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("IQTest.Core.CorrectAnswer", b =>
+            modelBuilder.Entity("IQTest.Core.Models.CorrectAnswer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -523,7 +523,7 @@ namespace IQTest.Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("IQTest.Core.Question", b =>
+            modelBuilder.Entity("IQTest.Core.Models.Question", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -549,49 +549,49 @@ namespace IQTest.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2894),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3483),
                             Questions = "Which number logically follows this series? 4,6,9,6,14,6,...",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2906),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3497),
                             Questions = "Choose a number, double it, add 10, halve it, and subtract your original number. The result is:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2907),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3499),
                             Questions = "In a race, you pass the person in the 2nd place. What position are you in now?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2908),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3501),
                             Questions = "Which word does not belong? Apple, Muffin, Orange, Cherry",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2909),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3502),
                             Questions = "If you had only one match and entered a dark room containing an oil lamp, some kindling wood, and a newspaper, which would you light first?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2910),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3503),
                             Questions = "Which word does not belong? Typhoon, Hurricane, Tornado, Light",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2911),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3504),
                             Questions = "What is the next number in the series: 10, 12, 14, 16,...?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -605,350 +605,350 @@ namespace IQTest.Repository.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2913),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3506),
                             Questions = "If all Zips are Zoodles, and the Zoodle Zane is a Zip, then Zane is definitely a Zoodle. True or False?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2914),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3507),
                             Questions = "Which number should come next in this series? 25, 24, 22, 19, 15,...",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2915),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3509),
                             Questions = "Which shape does not belong? Circle, Square, Triangle, Cylinder",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2916),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3510),
                             Questions = "What is half of two-thirds of three-quarters of four-fifths of 500?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2917),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3512),
                             Questions = "If you rearrange the letters \"BARBIT\", you would have the name of a:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2918),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3513),
                             Questions = "Which one of the five is least like the other four?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2919),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3515),
                             Questions = "Which number should come next in this series? 37, 34, 31, 28",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2920),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3516),
                             Questions = "If you remove one side from two identical squares and join them at the exposed points, what shape would you get?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2921),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3517),
                             Questions = "If you rearrange the letters \"OTOYTA\", you get the name of a:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 18,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2922),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3519),
                             Questions = "Choose the word most opposite to Cautious:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 19,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2923),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3520),
                             Questions = "If all Bloops are Razzies and all Razzies are Lazzies, then all Bloops are definitely Lazzies?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 20,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2924),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3522),
                             Questions = "Which one of the five makes the best comparison? Brother is to sister as niece is to:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 21,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2925),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3523),
                             Questions = "If the day after tomorrow is a Sunday, then what day is it today?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 22,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2926),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3524),
                             Questions = "Which of the following is least like the others?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 23,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2928),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3526),
                             Questions = "How many two-cent stamps are there in a dozen?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 24,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2928),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3527),
                             Questions = "Which of these is not a type of triangle based on its angles?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 25,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2929),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3528),
                             Questions = "If some Smaugs are Thors and some Thors are Thrains, then some Smaugs are definitely Thrains. This statement is:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2931),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3529),
                             Questions = "Ralph likes 25 but not 24; he likes 400 but not 300; he likes 144 but not 145. Which does he like?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2932),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3530),
                             Questions = "A plane crashes on the border of the U.S. and Canada. Where do they bury the survivors?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2933),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3532),
                             Questions = "The more you take from it, the larger it grows. What is it?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2934),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3534),
                             Questions = "What is the missing number in the sequence: 4, 9, 16, 25, ?, 49",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2936),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3535),
                             Questions = "A train leaves from New York City heading towards Los Angeles at 100 mph. Three hours later, a train leaves LA heading towards NYC at 200 mph. Which train will be closer to NYC when they meet?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 31,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2937),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3536),
                             Questions = "Which word is the odd one out: First, Second, Third, Forth, Fifth, Sixth, Seventh, Eighth?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 32,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2938),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3538),
                             Questions = "If a red house is made of red bricks and a blue house is made of blue bricks, what is a green house made of?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 33,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2939),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3539),
                             Questions = "What is half of a quarter of 400?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 34,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2940),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3540),
                             Questions = "If you reverse the word \"STOP\", what do you get?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 35,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2941),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3542),
                             Questions = "Which number is the odd one out: 3, 5, 11, 14, 17, 21?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 36,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2942),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3543),
                             Questions = "The maker doesn't want it; the buyer doesn't use it; and the user doesn't see it. What is it?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 37,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2943),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3545),
                             Questions = "If a doctor gives you 3 pills and tells you to take one every half hour starting immediately, how long would it be before all the pills had been taken?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 38,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2944),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3546),
                             Questions = "How many 9s are there between 1 and 100?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 39,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2945),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3549),
                             Questions = "If it takes 8 men 10 hours to build a wall, how long would it take 4 men?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 40,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2946),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3550),
                             Questions = "How many of each species did Moses take on the ark?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 41,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2947),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3551),
                             Questions = "Select a number that is one-third of one-half of one-fifth of 210",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 42,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2948),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3553),
                             Questions = "Which word spelled backwards will be the same as the original word?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 43,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2949),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3554),
                             Questions = "Which of the following can you find in the middle of Tokyo?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 44,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2950),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3556),
                             Questions = "Which number is one half of one quarter of one tenth of 400?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 45,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2951),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3559),
                             Questions = "If a circle is one, how many is an octagon?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 46,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2952),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3560),
                             Questions = "Mike is taller than Peter, and Ray is shorter than Mike. Which of the following statements would be more accurate?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 47,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2953),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3562),
                             Questions = "If more Winks are Pinkos and all Drabs are Durs, and some Pinkos are Drabs, then some Winks are definitely Durs. True or False?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 48,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2954),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3564),
                             Questions = "John needs 13 bottles of water from the store. John can only carry 3 at a time. What is the minimum number of trips John needs to make to the store?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 49,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2955),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3565),
                             Questions = "Choose the word most similar to Reckless:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 50,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2956),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3566),
                             Questions = "If you turn your left glove inside out, it will fit your right hand. True or False?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 51,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2957),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3568),
                             Questions = "What comes next in the series: O, T, T, F, F,...?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 52,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2958),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3570),
                             Questions = "If you rearrange the letters \"CIFAIPC\" you would have the name of a(n):",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 53,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2959),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3571),
                             Questions = "What is the missing number in the sequence shown below? 1, 8, 27, ?, 125",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 54,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2960),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3572),
                             Questions = "If you rearrange the letters \"SCTOLDNA\", you would have the name of a:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 55,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2961),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3574),
                             Questions = "Mary, who is sixteen years old, is four times older than her brother. How old will Mary be when she is twice as old as her brother?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 56,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2963),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3575),
                             Questions = "Choose the word most similar to Trustworthy:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 57,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2963),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3576),
                             Questions = "Which number represents the letter T in the series made of numbers 1-26?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 58,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2965),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3578),
                             Questions = "Which word does not belong with the others?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -962,146 +962,234 @@ namespace IQTest.Repository.Migrations
                         new
                         {
                             Id = 60,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2966),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3644),
                             Questions = "Fred will be twice as old as John in 5 years. If John is 10 years old, how old is Fred now?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 61,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2967),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3646),
                             Questions = "If Richard looks into a mirror and touches his left ear with his right hand, Richard's image seems to touch its right ear with its left hand. If Richard moves his left foot forward, the foot of Richard's image seems to move:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 62,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2968),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3647),
                             Questions = "If some Bats are Birds, all Birds are Beasts, and some Beasts are Blooms, then it's necessarily the case that:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 63,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2969),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3649),
                             Questions = "In a year, some months have 30 days, while others have 31. How many months have 28 days?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 64,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2970),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3650),
                             Questions = "If two pencils cost six cents, how much do eight pencils cost?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 65,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2971),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3652),
                             Questions = "If ROSE is coded as 6821, CHAIR is coded as 73456, then ARC is:",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 66,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2972),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3653),
                             Questions = "Tom's mother has three children. The first was named April, the second was named May. What was the third child's name?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 67,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2973),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3655),
                             Questions = "If the day before yesterday was Saturday, what day is it today?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 68,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2974),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3658),
                             Questions = "What is the next number in the sequence? 9,8,6,3?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 69,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2975),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3659),
                             Questions = "If a circular pizza is divided into eighths, how many pieces make a quarter of the pizza?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 70,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2976),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3661),
                             Questions = "In a leap year, how many days does February have?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 71,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2977),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3662),
                             Questions = "What is the next number in the sequence: 2, 4, 8, 16, 32, ... ?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 72,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2978),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3663),
                             Questions = "If there is a bowl with six apples and you take away four, how many do you have?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 73,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2979),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3665),
                             Questions = "Which shape has more sides: a hexagon or an octagon?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 74,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2980),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3666),
                             Questions = "Which is heavier: a pound of feathers or a pound of stones?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 75,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2981),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3668),
                             Questions = "Which word, when written in capital letters, is the same forwards, backwards and upside down?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 76,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2982),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3670),
                             Questions = "If you drop a yellow hat in the Red Sea, what does it become?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 77,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2983),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3671),
                             Questions = "Divide 30 by half and add 10. What do you get?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 78,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2984),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3672),
                             Questions = "Which of the following words is the odd one out? Cheese, Meat, Eggs, Lettuce",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 79,
-                            CreatedDate = new DateTime(2023, 10, 10, 12, 15, 36, 563, DateTimeKind.Local).AddTicks(2985),
+                            CreatedDate = new DateTime(2023, 12, 9, 18, 8, 51, 872, DateTimeKind.Local).AddTicks(3674),
                             Questions = "What can be cracked, made, told, and played?",
                             UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
-            modelBuilder.Entity("IQTest.Core.WrongAnswer", b =>
+            modelBuilder.Entity("IQTest.Core.Models.UserApp", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("IQTest.Core.Models.UserRefreshToken", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("Expiration")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserRefreshTokens");
+                });
+
+            modelBuilder.Entity("IQTest.Core.Models.WrongAnswer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -2955,20 +3043,153 @@ namespace IQTest.Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("IQTest.Core.CorrectAnswer", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
-                    b.HasOne("IQTest.Core.Question", "Question")
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("IQTest.Core.Models.CorrectAnswer", b =>
+                {
+                    b.HasOne("IQTest.Core.Models.Question", "Question")
                         .WithOne("CorrectAnswer")
-                        .HasForeignKey("IQTest.Core.CorrectAnswer", "QuestionId")
+                        .HasForeignKey("IQTest.Core.Models.CorrectAnswer", "QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Question");
                 });
 
-            modelBuilder.Entity("IQTest.Core.WrongAnswer", b =>
+            modelBuilder.Entity("IQTest.Core.Models.WrongAnswer", b =>
                 {
-                    b.HasOne("IQTest.Core.Question", "Question")
+                    b.HasOne("IQTest.Core.Models.Question", "Question")
                         .WithMany("WrongAnswer")
                         .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -2977,7 +3198,58 @@ namespace IQTest.Repository.Migrations
                     b.Navigation("Question");
                 });
 
-            modelBuilder.Entity("IQTest.Core.Question", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("IQTest.Core.Models.UserApp", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("IQTest.Core.Models.UserApp", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IQTest.Core.Models.UserApp", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("IQTest.Core.Models.UserApp", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IQTest.Core.Models.Question", b =>
                 {
                     b.Navigation("CorrectAnswer")
                         .IsRequired();

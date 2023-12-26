@@ -16,15 +16,23 @@ using Microsoft.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Reflection;
+using IQTest.Core.Configuration;
+using IQTest.Core.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 //builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -67,10 +75,62 @@ builder.Services.AddDbContext<AppDbContext>(x =>
     });
 });
 
+builder.Services.AddIdentity<UserApp, IdentityRole>(Opt =>
+{
+    Opt.User.RequireUniqueEmail = true;
+    Opt.Password.RequireNonAlphanumeric = false;
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
 builder.Host.UseServiceProviderFactory
     (new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+//{
+//    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOptions>();
+//    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+//    {
+//        ValidIssuer = tokenOptions.Issuer,
+//        ValidAudience = tokenOptions.Audience[0],
+//        IssuerSigningKey = SignService.GetSymmetricSecuritykey(tokenOptions.SecurityKey),
+
+//        ValidateIssuerSigningKey = true,
+//        ValidateAudience = true,
+//        ValidateIssuer = true,
+//        ValidateLifetime = true,
+//        ClockSkew = TimeSpan.Zero
+//    };
+//});
+
+builder.Services.Configure<CustomTokenOptions>(builder.Configuration.GetSection("TokenOptions"));
+builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+{
+    var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<CustomTokenOptions>();
+    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+    {
+        ValidIssuer = tokenOptions.Issuer,
+        ValidAudience = tokenOptions.Audience[0],
+        IssuerSigningKey = SignService.GetSymmetricSecuritykey(tokenOptions.SecurityKey),
+
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+builder.Services.AddControllers();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -80,9 +140,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UserCustomException();
+
 app.UseHttpsRedirection();
 
-app.UserCustomException();
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();

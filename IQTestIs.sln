@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Caching", "IQTest.Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.Web", "IQTest.Web\IQTest.Web.csproj", "{9F7AB4E1-35A6-4E9C-92C1-DBC58190461D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQTest.API", "IQTest.API\IQTest.API.csproj", "{68C969EF-0878-450F-998B-BA5873CEC5BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTest.API", "IQTest.API\IQTest.API.csproj", "{68C969EF-0878-450F-998B-BA5873CEC5BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{33374C9B-74EF-4B36-A6D9-513B67FCDA85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "test\Tests\Tests.csproj", "{CE78D8C7-8830-4365-95AF-7B7D832B5102}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +49,16 @@ Global
 		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C969EF-0878-450F-998B-BA5873CEC5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE78D8C7-8830-4365-95AF-7B7D832B5102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE78D8C7-8830-4365-95AF-7B7D832B5102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE78D8C7-8830-4365-95AF-7B7D832B5102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE78D8C7-8830-4365-95AF-7B7D832B5102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE78D8C7-8830-4365-95AF-7B7D832B5102} = {33374C9B-74EF-4B36-A6D9-513B67FCDA85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD95737A-4450-47F2-86BE-1330C91BC3F0}
