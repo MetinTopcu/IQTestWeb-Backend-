@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IQTest.API.Controllers
 {
-    [Authorize(Roles ="admin,user")]
+    [Authorize(Roles ="admin,user",Policy="AnkaraPolicy")]
     public class QuestionsController : CustomBaseController
     {
         private readonly IMapper _mapper;

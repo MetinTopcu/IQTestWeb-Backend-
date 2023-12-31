@@ -43,6 +43,14 @@ builder.Services.AddAutoMapper(typeof(MapProfile));
 //builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 //builder.Services.AddScoped<IQuestionService, QuestionService>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AnkaraPolicy", policy =>
+    {
+        policy.RequireClaim("city", "ankara","istanbul");
+    });
+});
+
 void ConfigureServices(IServiceCollection services)
 {
 

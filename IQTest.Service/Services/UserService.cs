@@ -26,7 +26,16 @@ namespace IQTest.Service.Services
 
         public async Task<CustomResponseDto<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto)
         {
-            var user = new UserApp { Email = createUserDto.Email, UserName = createUserDto.UserName };
+            var user = new UserApp();
+
+            if(createUserDto.City != null)
+            {
+                user = new UserApp { Email = createUserDto.Email, UserName = createUserDto.UserName , City = createUserDto.City};
+            }
+            else
+            {
+                user = new UserApp { Email = createUserDto.Email, UserName = createUserDto.UserName };
+            }
 
             var result = await _userManager.CreateAsync(user, createUserDto.Password);
 
