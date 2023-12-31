@@ -40,8 +40,11 @@ namespace IQTest.Service.Services
             
         }
 
-        private IEnumerable<Claim> GetClaim(UserApp userApp, List<string> audiences) //üyelik sistemi ile token
+        private async Task<IEnumerable<Claim>> GetClaim(UserApp userApp, List<string> audiences) //üyelik sistemi ile token
         {
+
+            var userRoles = await _userManager.GetRolesAsync(userApp);
+
             var userList = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, userApp.Id),
@@ -51,7 +54,7 @@ namespace IQTest.Service.Services
             };
 
             userList.AddRange(audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
-
+            userList.AddRange(userRoles.Select(x => new Claim(ClaimTypes.Role, x)));
             return userList;
         }
 
@@ -66,7 +69,7 @@ namespace IQTest.Service.Services
             return claims;
         }
 
-        public TokenDto CreateToken(UserApp userApp)
+        public async Task<TokenDto> CreateToken(UserApp userApp)
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_customTokenOptions.AccessTokenExpiration);
             var refreshTokenExpiration = DateTime.Now.AddMinutes(_customTokenOptions.RefreshTokenExpiration);
@@ -79,7 +82,7 @@ namespace IQTest.Service.Services
                 issuer: _customTokenOptions.Issuer, 
                 expires: accessTokenExpiration,
                 notBefore: DateTime.Now,
-                claims: GetClaim(userApp, _customTokenOptions.Audience),
+                claims: await GetClaim(userApp, _customTokenOptions.Audience),
                 signingCredentials: signingCredentials);
 
             var handler = new JwtSecurityTokenHandler();

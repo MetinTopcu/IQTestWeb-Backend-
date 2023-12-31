@@ -15,11 +15,13 @@ namespace IQTest.Service.Services
     {
         private readonly UserManager<UserApp> _userManager;
         private readonly IMapper _mapper;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UserService(UserManager<UserApp> userManager, IMapper mapper)
+        public UserService(UserManager<UserApp> userManager, IMapper mapper, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _roleManager = roleManager;
         }
 
         public async Task<CustomResponseDto<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto)
@@ -36,6 +38,29 @@ namespace IQTest.Service.Services
             }
 
             return CustomResponseDto<UserAppDto>.Success(200, _mapper.Map<UserAppDto>(user));
+        }
+
+        public async Task<CustomResponseDto<NoContentDto>> CreateUserRoles(CreateUserRolesDTO createUserRolesDTO)
+        { 
+
+            var user = await _userManager.FindByIdAsync(createUserRolesDTO.UserId.ToString());
+
+            //AspNetUserRoles tablosu
+            await _userManager.AddToRoleAsync(user, createUserRolesDTO.Roles);
+
+
+            return CustomResponseDto<NoContentDto>.Success(201);
+        }
+
+        public async Task<CustomResponseDto<NoContentDto>> CreateRoles(CreateRolesDTO createRolesDTO)
+        {
+            //AspNetRoles tablosu
+            if (!await _roleManager.RoleExistsAsync(createRolesDTO.Roles))
+            {
+                await _roleManager.CreateAsync(new() { Name = createRolesDTO.Roles });
+            }
+
+            return CustomResponseDto<NoContentDto>.Success(201);
         }
 
         public async Task<CustomResponseDto<UserAppDto>> GetUserByNameAsync(string userName)

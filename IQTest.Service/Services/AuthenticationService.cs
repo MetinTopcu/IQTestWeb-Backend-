@@ -44,7 +44,7 @@ namespace IQTest.Service.Services
             if(!await _userManager.CheckPasswordAsync(user,loginDto.Password)) return CustomResponseDto<TokenDto>.Fail(400, 
                 "Email or Password is wrong");
 
-            var token = _tokenService.CreateToken(user);
+            var token = await _tokenService.CreateToken(user);
 
             var userRefreshToken = await _userRefreshTokenService.Where(x => x.UserId == user.Id).SingleOrDefaultAsync();
 
@@ -92,7 +92,7 @@ namespace IQTest.Service.Services
             
             if(user == null) return CustomResponseDto<TokenDto>.Fail(404, "User Id not found");
 
-            var tokenDto = _tokenService.CreateToken(user);
+            var tokenDto = await _tokenService.CreateToken(user);
 
             existRefreshToken.Code = tokenDto.RefreshToken;
             existRefreshToken.Expiration = tokenDto.RefrestTokenExpiration;
