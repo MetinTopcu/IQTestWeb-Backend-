@@ -93,26 +93,6 @@ builder.Host.UseServiceProviderFactory
     (new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
-//{
-//    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOptions>();
-//    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-//    {
-//        ValidIssuer = tokenOptions.Issuer,
-//        ValidAudience = tokenOptions.Audience[0],
-//        IssuerSigningKey = SignService.GetSymmetricSecuritykey(tokenOptions.SecurityKey),
-
-//        ValidateIssuerSigningKey = true,
-//        ValidateAudience = true,
-//        ValidateIssuer = true,
-//        ValidateLifetime = true,
-//        ClockSkew = TimeSpan.Zero
-//    };
-//});
 
 builder.Services.Configure<CustomTokenOptions>(builder.Configuration.GetSection("TokenOptions"));
 builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
@@ -136,6 +116,14 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = true,
         ClockSkew = TimeSpan.Zero
     };
+}).AddFacebook(opt =>
+{
+    opt.AppId = "902721531339391";
+    opt.AppSecret = "48f2f130a57afbaf86b3b21271bdf905";
+}).AddGoogle(opt =>
+{
+    opt.ClientId = "754794628181-6l69sjhvf5i06s8ip23j4m6pb6abvbat.apps.googleusercontent.com";
+    opt.ClientSecret = "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";
 });
 
 builder.Services.AddControllers();

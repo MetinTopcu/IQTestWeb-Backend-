@@ -43,7 +43,7 @@ namespace Tests
             var loginDto = loginDtos.First();
             var tokenDto = tokenDtos.First();
 
-            //_mockService.Setup(x => x.CreateTokenAsync(loginDto)).Returns(CustomResponseDto<TokenDto>.Success(200, tokenDto));
+            _mockService.Setup(x => x.CreateTokenAsync(loginDto)).ReturnsAsync(CustomResponseDto<TokenDto>.Success(200, tokenDto));
 
             var result = await _controller.CreateToken(loginDto);
 
